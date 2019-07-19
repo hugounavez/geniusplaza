@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 class ViewController: UIViewController {
 
     let mainView = ViewControllerViews()
@@ -56,13 +56,31 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         return model.results.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "datacell", for: indexPath) as! DataCell
     
-        cell.mainLabel.text = self.viewModel.model?.results[indexPath.row].artistName
+        
+        
+        if let model = self.viewModel.model?.results[indexPath.row]{
+            cell.mainLabel.text = model.artistName
+            cell.releaseDate.text = "Release date: " + model.releaseDate
+            
+            if let url = URL(string: model.artworkUrl100){
+                cell.mainImage.kf.setImage(with: url)
+            }
+            
+        }
         
         
         
+        
+        
+        
+        //cell.mainImage.kf.setImage(with: URL(string: (self.viewModel.model?.results[indexPath.row].artworkUrl100)!))
         return cell
     }
     

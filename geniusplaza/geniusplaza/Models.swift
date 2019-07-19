@@ -16,7 +16,7 @@ struct MediaObject: Codable{
     var name: String
     var kind: String
     var artistUrl: String
-
+    var artworkUrl100: String
     enum CodingKeys: String, CodingKey{
         case artistName
         case id
@@ -24,6 +24,7 @@ struct MediaObject: Codable{
         case name
         case kind
         case artistUrl
+        case artworkUrl100
     }
 }
 

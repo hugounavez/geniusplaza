@@ -7,4 +7,5 @@ target 'geniusplaza' do
 
   # Pods for geniusplaza
   pod 'Alamofire'
+  pod 'Kingfisher'
 end
