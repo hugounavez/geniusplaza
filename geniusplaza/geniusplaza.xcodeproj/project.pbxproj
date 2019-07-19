@@ -89,18 +89,58 @@
 			isa = PBXGroup;
 			children = (
 				B74BF28022E1890D00FCF587 /* AppDelegate.swift */,
-				B74BF28222E1890D00FCF587 /* ViewController.swift */,
-				B74BF29222E18A3300FCF587 /* NetworkManager.swift */,
-				B74BF29422E18A5A00FCF587 /* ViewControllerViews.swift */,
-				B7F6847322E1900400FD9D07 /* ViewControllerViewModel.swift */,
-				B7F6847122E18E3300FD9D07 /* Models.swift */,
+				B7F6847B22E1E25C00FD9D07 /* View */,
+				B7F6847A22E1E1B500FD9D07 /* ViewModels */,
+				B7F6847922E1E1A000FD9D07 /* Models */,
+				B7F6847822E1E19500FD9D07 /* Controllers */,
 				B7F6847522E1908400FD9D07 /* DataCell.swift */,
+				B7F6847722E1E18D00FD9D07 /* Network */,
 				B74BF28422E1890D00FCF587 /* Main.storyboard */,
 				B74BF28722E1890E00FCF587 /* Assets.xcassets */,
 				B74BF28922E1890E00FCF587 /* LaunchScreen.storyboard */,
 				B74BF28C22E1890E00FCF587 /* Info.plist */,
 			);
 			path = geniusplaza;
+			sourceTree = "<group>";
+		};
+		B7F6847722E1E18D00FD9D07 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B74BF29222E18A3300FCF587 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B7F6847822E1E19500FD9D07 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B74BF28222E1890D00FCF587 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B7F6847922E1E1A000FD9D07 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B7F6847122E18E3300FD9D07 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B7F6847A22E1E1B500FD9D07 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B7F6847322E1900400FD9D07 /* ViewControllerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B7F6847B22E1E25C00FD9D07 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B74BF29422E18A5A00FCF587 /* ViewControllerViews.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

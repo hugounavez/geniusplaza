@@ -31,7 +31,7 @@ class DataCell: UITableViewCell{
         return label
     }()
     
-    let album : UILabel = {
+    let albumLabel : UILabel = {
     let label: UILabel = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
@@ -57,10 +57,8 @@ class DataCell: UITableViewCell{
         self.mainImage.heightAnchor.constraint(equalToConstant: 100).isActive = true
         self.mainImage.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
-        self.mainImage.backgroundColor = .red
-        
       self.addSubview(self.mainLabel)
-        self.mainLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10).isActive = true
+        self.mainLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 20).isActive = true
         self.mainLabel.leftAnchor.constraint(equalTo: self.mainImage.rightAnchor, constant: 5).isActive = true
         self.mainLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -5).isActive = true
         self.mainLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
@@ -72,7 +70,15 @@ class DataCell: UITableViewCell{
         self.releaseDate.heightAnchor.constraint(equalTo: self.releaseDate.heightAnchor, multiplier: 1).isActive = true
         
         
+        self.addSubview(self.albumLabel)
+        self.albumLabel.topAnchor.constraint(equalTo: self.releaseDate.bottomAnchor, constant: 5).isActive = true
+        self.albumLabel.centerXAnchor.constraint(equalTo: self.releaseDate.centerXAnchor).isActive = true
+        self.albumLabel.widthAnchor.constraint(equalTo: self.releaseDate.widthAnchor).isActive = true
+        self.albumLabel.heightAnchor.constraint(equalTo: self.releaseDate.heightAnchor, multiplier: 1).isActive = true
         
+        
+        self.mainImage.layer.cornerRadius = 10
+        self.mainImage.clipsToBounds = true
     }
     
 }

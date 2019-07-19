@@ -25,13 +25,13 @@ class ViewController: UIViewController {
     func setupViews(){
         self.view.layoutIfNeeded()
         
+        self.view.backgroundColor = .white
         self.view.addSubview(self.mainView)
         self.mainView.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
         self.mainView.heightAnchor.constraint(equalTo: self.view.heightAnchor,  multiplier: 1).isActive = true
         self.mainView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         self.mainView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-        
-        self.view.backgroundColor = .blue
+    
         self.mainView.setupView()
         
         self.mainView.tableview.delegate = self
@@ -68,7 +68,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         if let model = self.viewModel.model?.results[indexPath.row]{
             cell.mainLabel.text = model.artistName
             cell.releaseDate.text = "Release date: " + model.releaseDate
-            
+            cell.albumLabel.text = "Name: " + model.name
             if let url = URL(string: model.artworkUrl100){
                 cell.mainImage.kf.setImage(with: url)
             }
@@ -76,11 +76,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         }
         
         
-        
-        
-        
-        
-        //cell.mainImage.kf.setImage(with: URL(string: (self.viewModel.model?.results[indexPath.row].artworkUrl100)!))
         return cell
     }
     
