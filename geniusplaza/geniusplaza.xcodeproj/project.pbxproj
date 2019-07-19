@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,9 +14,16 @@
 		B74BF28B22E1890E00FCF587 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74BF28922E1890E00FCF587 /* LaunchScreen.storyboard */; };
 		B74BF29322E18A3300FCF587 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BF29222E18A3300FCF587 /* NetworkManager.swift */; };
 		B74BF29522E18A5A00FCF587 /* ViewControllerViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BF29422E18A5A00FCF587 /* ViewControllerViews.swift */; };
+		B7F6847222E18E3300FD9D07 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F6847122E18E3300FD9D07 /* Models.swift */; };
+		B7F6847422E1900400FD9D07 /* ViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F6847322E1900400FD9D07 /* ViewControllerViewModel.swift */; };
+		B7F6847622E1908400FD9D07 /* DataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F6847522E1908400FD9D07 /* DataCell.swift */; };
+		D6FD6F41BFD1FDB2045551E5 /* Pods_geniusplaza.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1357E75EFC2C2E3DFCE2E21A /* Pods_geniusplaza.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1357E75EFC2C2E3DFCE2E21A /* Pods_geniusplaza.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_geniusplaza.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59ADE84A1E8ADEFD3EE4DAAC /* Pods-geniusplaza.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geniusplaza.debug.xcconfig"; path = "Target Support Files/Pods-geniusplaza/Pods-geniusplaza.debug.xcconfig"; sourceTree = "<group>"; };
+		6E3D609E57B477A434B719D9 /* Pods-geniusplaza.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geniusplaza.release.xcconfig"; path = "Target Support Files/Pods-geniusplaza/Pods-geniusplaza.release.xcconfig"; sourceTree = "<group>"; };
 		B74BF27D22E1890D00FCF587 /* geniusplaza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = geniusplaza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B74BF28022E1890D00FCF587 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B74BF28222E1890D00FCF587 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +33,9 @@
 		B74BF28C22E1890E00FCF587 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B74BF29222E18A3300FCF587 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B74BF29422E18A5A00FCF587 /* ViewControllerViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerViews.swift; sourceTree = "<group>"; };
+		B7F6847122E18E3300FD9D07 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		B7F6847322E1900400FD9D07 /* ViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerViewModel.swift; sourceTree = "<group>"; };
+		B7F6847522E1908400FD9D07 /* DataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6FD6F41BFD1FDB2045551E5 /* Pods_geniusplaza.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AA7D511906DF817BE38DFED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				59ADE84A1E8ADEFD3EE4DAAC /* Pods-geniusplaza.debug.xcconfig */,
+				6E3D609E57B477A434B719D9 /* Pods-geniusplaza.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		253B97DC72329064333F105A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1357E75EFC2C2E3DFCE2E21A /* Pods_geniusplaza.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B74BF27422E1890D00FCF587 = {
 			isa = PBXGroup;
 			children = (
 				B74BF27F22E1890D00FCF587 /* geniusplaza */,
 				B74BF27E22E1890D00FCF587 /* Products */,
+				0AA7D511906DF817BE38DFED /* Pods */,
+				253B97DC72329064333F105A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +92,9 @@
 				B74BF28222E1890D00FCF587 /* ViewController.swift */,
 				B74BF29222E18A3300FCF587 /* NetworkManager.swift */,
 				B74BF29422E18A5A00FCF587 /* ViewControllerViews.swift */,
+				B7F6847322E1900400FD9D07 /* ViewControllerViewModel.swift */,
+				B7F6847122E18E3300FD9D07 /* Models.swift */,
+				B7F6847522E1908400FD9D07 /* DataCell.swift */,
 				B74BF28422E1890D00FCF587 /* Main.storyboard */,
 				B74BF28722E1890E00FCF587 /* Assets.xcassets */,
 				B74BF28922E1890E00FCF587 /* LaunchScreen.storyboard */,
@@ -77,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B74BF28F22E1890E00FCF587 /* Build configuration list for PBXNativeTarget "geniusplaza" */;
 			buildPhases = (
+				9B587497DC544B318F275B49 /* [CP] Check Pods Manifest.lock */,
 				B74BF27922E1890D00FCF587 /* Sources */,
 				B74BF27A22E1890D00FCF587 /* Frameworks */,
 				B74BF27B22E1890D00FCF587 /* Resources */,
+				F7663F2A1437C4E3D2903845 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,15 +171,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9B587497DC544B318F275B49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-geniusplaza-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7663F2A1437C4E3D2903845 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-geniusplaza/Pods-geniusplaza-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-geniusplaza/Pods-geniusplaza-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-geniusplaza/Pods-geniusplaza-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B74BF27922E1890D00FCF587 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B74BF29322E18A3300FCF587 /* NetworkManager.swift in Sources */,
+				B7F6847422E1900400FD9D07 /* ViewControllerViewModel.swift in Sources */,
 				B74BF29522E18A5A00FCF587 /* ViewControllerViews.swift in Sources */,
+				B7F6847622E1908400FD9D07 /* DataCell.swift in Sources */,
 				B74BF28322E1890D00FCF587 /* ViewController.swift in Sources */,
 				B74BF28122E1890D00FCF587 /* AppDelegate.swift in Sources */,
+				B7F6847222E18E3300FD9D07 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +368,7 @@
 		};
 		B74BF29022E1890E00FCF587 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59ADE84A1E8ADEFD3EE4DAAC /* Pods-geniusplaza.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -306,6 +387,7 @@
 		};
 		B74BF29122E1890E00FCF587 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E3D609E57B477A434B719D9 /* Pods-geniusplaza.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -18,15 +18,13 @@ class ViewControllerViews: UIView{
     }()
     
     func setupView(){
-        self.backgroundColor = .white
-                
+        self.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(self.tableview)
         self.tableview.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1).isActive = true
         self.tableview.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         self.tableview.topAnchor.constraint(equalTo: self.topAnchor, constant: 44).isActive = true
         
-        self.tableview.backgroundColor = .orange
-        
+    self.tableview.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
     
 }
