@@ -56,11 +56,11 @@ class ViewControllerViews: UIView{
     self.tableview.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         
         
-    self.title.backgroundColor = .white
+    self.title.backgroundColor = .clear
     self.tableview.allowsSelection = false
+    
         
     }
     
-    
-    
+
 }

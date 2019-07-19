@@ -37,11 +37,33 @@ class ViewController: UIViewController {
         self.mainView.tableview.delegate = self
         self.mainView.tableview.dataSource = self
         self.mainView.tableview.register(DataCell.self, forCellReuseIdentifier: "datacell")
+        self.mainView.tableview.tableFooterView = UIView()
         
+        let refreshControl = UIRefreshControl()
+        
+        refreshControl.addTarget(self, action: #selector(refreshInfo), for: .valueChanged)
+        refreshControl.beginRefreshing()
+        
+        self.mainView.tableview.refreshControl = refreshControl
         
         self.viewModel.getData { (response) in
             self.mainView.tableview.reloadData()
         }
+        
+        
+    }
+    
+    
+    @objc func refreshInfo(){
+        print("test")
+        self.mainView.tableview.refreshControl?.beginRefreshing()
+        
+        self.viewModel.getData { (response) in
+            self.mainView.tableview.reloadData()
+            print(response)
+            self.mainView.tableview.refreshControl?.endRefreshing()
+        }
+        
         
         
     }
